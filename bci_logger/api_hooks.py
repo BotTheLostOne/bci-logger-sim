@@ -6,7 +6,7 @@ Provides API hooks for integrating BCI signals with gaming applications.
 Specifically designed for neural-DnD game with 'intuition rolls'.
 """
 
-from typing import Dict, Any, Optional, Callable
+from typing import Dict, Any, Optional, Callable, List
 from .brain_model import BrainModel
 from .logger import JSONLogger, CSVLogger
 
@@ -138,8 +138,8 @@ class IntuitionRollAPI:
     
     def batch_intuition_checks(
         self,
-        checks: list[Dict[str, Any]]
-    ) -> list[Dict[str, Any]]:
+        checks: List[Dict[str, Any]]
+    ) -> List[Dict[str, Any]]:
         """
         Perform multiple intuition checks in batch.
         
